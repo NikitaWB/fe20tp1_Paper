@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- edit this toS update github page -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fredrik Wintzell, Nikita Buyondo & Ivar Munukka">
+    <meta name="description"
+        content="Quire - A document page where you can write all your notes, save them and create your favorites">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.bubble.css">
+    <script defer src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <link rel="stylesheet" href="ql-style.css">
+    <link rel="stylesheet" href="print.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="note.js" defer></script>
+    <script src="theme.js" defer></script>
+    <script src="popup.js" defer></script>
+    <title>Quire - quick notes</title>
+</head>
+
+<body>
+    <div id="modal">
+        <div class="modalconent">
+            <h1>Quire, your personal notes</h1>
+
+            <p>Welcome to Quire! <br><br>
+                Whenever you wish you can use this site to write any notes you might need.
+                You can choose between a light and dark mode for the website's appearance but also change between two
+                modes for fonts
+                <br>
+                Write titles, compose notes using the editor <br>
+                Highlight your text to open more functions such as changing betwen diferent headings, changing the text
+                to be bold or italics, and even add your own images and create lists.
+            </p>
+            <button id="modalbutton">Close</button>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h1>Quire - Quick notes</h1>
+
+            <div id="edit-field"> <input placeholder='Title (optional)' id='title' name='title' type="text">
+                <button id='save'>Save</button>
+                <div id="editor"></div>
+            </div>
+        </section>
+
+
+        <aside>
+
+            <header id="sidebar-header">
+                <button id='dm-btn'>mode</button>
+                <button id='ft-btn'>mode</button>
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <button class='display-button show-all active-display'>Saved Notes</button>
+                <button class='display-button show-favorites'>Favorite Notes</button>
+            </header>
+
+            <div class="note-wrapper">
+                <div id="note-list"></div>
+                <div id="favorite-list"></div>
+            </div>
+
+        </aside>
+    </main>
+</body>
+
+</html>
